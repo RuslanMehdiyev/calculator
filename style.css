@@ -1,0 +1,45 @@
+body {
+  background-color: #000;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main {
+  padding: 15px 20px;
+  width: 350px;
+  min-height: 300px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+.display {
+  padding: 10px;
+  font-size: 18px;
+  width: 100%;
+  height: 100px;
+  background-color: rgb(210, 212, 214);
+  position: relative;
+}
+#display {
+  position: relative;
+}
+#display::after {
+  content: "";
+  height: 23px;
+  width: 2px;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  right: -5px;
+  animation: cursor 0.7s linear infinite;
+}
+
+@keyframes cursor {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
